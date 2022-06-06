@@ -197,9 +197,10 @@
                                 </label>
                                 <select name="role_id" id="roleID" class="form-control">
                                     <option value="">-- Pilih hak akses --</option>
-                                    <option value="1">Admin</option>
-                                    <option value="0">non Admin</option>
                                     <option value="2">Master Admin</option>
+                                    <option value="1">Admin</option>
+                                    <option value="0">Non Admin</option>
+                                    
                                 </select>
 
                                 @error('role_id')

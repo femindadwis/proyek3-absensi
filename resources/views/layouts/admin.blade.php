@@ -166,7 +166,8 @@
             
                 <h6 class="collapse-header">Master Screens:</h6>
                 @if(Auth::user()->is_admin == '2')
-                <a class="collapse-item" href="{{ route('MstAdmin.index') }}">{{ __('admin') }}</a> 
+                <a class="collapse-item" href="{{ route('Admin.index') }}">{{ __('admin') }}</a>
+                <a class="collapse-item" href="{{ route('Toko.index') }}">{{ __('toko') }}</a> 
                 @endif
                 @if(Auth::user()->is_admin == '1')
                 <a class="collapse-item" href="{{ route('MstKaryawan.index') }}">{{ __('Karyawan') }}</a> 

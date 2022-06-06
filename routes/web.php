@@ -7,6 +7,8 @@ use App\Http\Controllers\MstKaryawanController;
 use App\Http\Controllers\MstLokasiController;
 use App\Http\Controllers\AbsensiController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TokoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +26,8 @@ Route::group(['middleware' => 'auth'], function() {
 Route::resource('MstJabatan', MstJabatanController::class);
 Route::resource('MstKaryawan', MstKaryawanController::class);
 Route::resource('MstLokasi', MstLokasiController::class);
-Route::resource('MstAdmin', MstAdminController::class);
+Route::resource('Admin', AdminController::class);
+Route::resource('Toko', TokoController::class);
 Route::resource('Absensi', AbsensiController::class);
 Route::get('Absensi/detail/{id}', [AbsensiController::class,'detailAbsensi'])->name('absensi.detail');;
 Route::get('Absensi/detail/{id}/export/{daterange}', [AbsensiController::class,'exportDetailAbsensi'])->name('export.detailAbsensi');;
